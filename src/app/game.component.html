@@ -1,0 +1,17 @@
+<div id="box-container">
+  <div #box1 class="box box_1" (click)="choose(box1)">&nbsp;</div>
+  <div #box2 class="box box_2" (click)="choose(box2)">&nbsp;</div>
+  <div #box3 class="box box_3" (click)="choose(box3)">&nbsp;</div>
+</div>
+<div id="scene">
+    <div class="headline">
+        {{ message }}
+        {{ countdownMsg }}
+    </div>
+    <div class="box-bg"></div>
+    <div class="button" (click)="roll(box1, box2, box3)" [class.disabled]="isButtonDisabled">
+      {{ isNewGame ? 'New Game' : 'Continue with Level ' + reachedLevel }}
+    </div>
+</div>
+
+
